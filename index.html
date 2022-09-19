@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Interés en Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-evenly align-items-center  min-vh-100 p-3">
+        <!-- Ejercicio de jumbotron-->
+        <div class="jumbotronExample col-6 bg-light rounded p-5 mb-5">
+            <h1 class="fw-bold mb-3">Custom jumbotron</h1>
+            <p class="fs-5 mb-3">Usando una serie de utilidades, puede crear este jumbotron, como el de versiones anteriores de Bootstrap. Echa un vistazo a los ejemplos a continuación para saber cómo puedes remezclarlo y cambiarle el estilo a tu gusto.</p>
+            <button type="button" class="btn btn-primary fs-5 mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Mostrar Modal</button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Ejemplo de modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aqui va el cuerpo de nuestro modal.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Ejercicio de formulario-->
+    <form class="d-flex flex-column border rounded p-5 bg-light" action="/" method="">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control mb-3">
+        <label for="telefono" class="form-label">Telefono</label>
+        <input type="tel"  id="telefono" class="form-control mb-3">
+        <label for="mensaje" class="form-label">Mensaje </label>
+        <textarea class="form-control mb-3" name="mensaje        " id="mensaje" cols="30" rows="10"></textarea>
+        <button class="btn btn-primary">Enviar</button>
+    </form>
+    <!-- Ejercicio de  tarjeta con tu perfil-->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Deyner Oliver Rodriguez Orobio</h5>
+          <p class="card-text">Apasionado por el desarrollo web, con grandes aspiraciones.</p>
+        </div>
+        <div class="card-footer">
+            deynerrodriguez24@hotmail.com
+          </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+    
+        myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+        })
+    </script>
+</body>
+
+</html>
